@@ -3,8 +3,6 @@ package math.problems;
 import java.util.ArrayList;
 import java.util.List;
 
-import databases.ConnectToSqlDB;
-
 public class LowestNumber {
 
     public static void main(String[] args) {

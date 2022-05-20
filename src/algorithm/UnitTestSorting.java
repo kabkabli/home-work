@@ -1,31 +1,43 @@
 package algorithm;
 
-import org.junit.Assert;
+
+
+import java.util.Arrays;
 
 public class UnitTestSorting {
 
-    /*
-      This class is about Unit testing for Sorting Algorithm.
-     */
+
+
     public static void main(String[] args) {
-        int [] unSortedArray = {6,9,2,5,1,0,4};
-        int [] sortedArray =   {0,1,2,4,5,6,9};
-        //Create Sort object
-        Sort sort = new Sort();
-        //apply unsorted array to selectionSort.
-        sort.selectionSort(unSortedArray);
-        //verify if the unsorted array is sorted by the selection sort algorithm.
-        try {
-            Assert.assertEquals(sortedArray, unSortedArray);
-        }catch(Exception ex){
-            ex.getMessage();
-        }
+        Sort sortArgo = new Sort();
 
-        //Now implement Unit test for rest of the soring algorithm...................below
+        int[] array = {11,15,16,12,10,20,19,13,14,18,17,5,4,1,2,3,7,6,9,8};
+        System.out.println("This is the unSorted Array: " + Arrays.toString(array));
 
+        sortArgo.selectionSort(array);
+        System.out.println("This is the integer array sorted with selectionSort: " + Arrays.toString(array));
 
+        sortArgo.insertionSort(array);
+        System.out.println("This is the integer array sorted with insertionSort: " + Arrays.toString(array));
 
+        sortArgo.bubbleSort(array);
+        System.out.println("This is the integer array sorted with bubbleSort: " + Arrays.toString(array));
 
+        sortArgo.mergeSort(array, 0, array.length - 1);
+        System.out.println("This is the integer array sorted with mergeSort: " + Arrays.toString(array));
 
+        sortArgo.quickSort(array, 0, array.length - 1);
+        System.out.println("This is the integer array sorted with quickSort: " + Arrays.toString(array));
+
+        sortArgo.heapSort(array);
+        System.out.println("This is the integer array sorted with heapSort: " + Arrays.toString(array));
+
+        sortArgo.bucketSort(array, 10);
+        System.out.println("This is the integer array sorted with bucketSort: " + Arrays.toString(array));
+
+        sortArgo.shellSort(array, array.length);
+        System.out.println("This is the integer array sorted with shellSort: " + Arrays.toString(array));
     }
+
+
 }

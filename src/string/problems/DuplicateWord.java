@@ -1,14 +1,24 @@
-package string.problems;
+package datastructure;
 
-public class DuplicateWord {
+import java.util.HashMap;
+
+public class CollectionView {
 
     public static void main(String[] args) {
         /*
-         * Write a java program to find the duplicate words and their number of occurrences in the string.
-         * Also Find the average length of the words.
+         Map is created and some data is inserted into it..
+         Retrieve the Collection view of the values present in map
          */
 
-        String st = "Java is a programming Language. Java is also an Island of Indonesia. Java is widely used language";
+        HashMap<Integer, String> map = new HashMap<Integer, String>();
+        map.put(1, "NYC");
+        map.put(2, "LA");
+        map.put(3, "Denver");
+        map.put(4, "Boston");
+        map.put(5, "San Jose");
+        map.put(6, "Seattle");
+
+        System.out.println(map.values());
 
     }
 

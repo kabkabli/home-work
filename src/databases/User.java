@@ -1,21 +1,26 @@
 package databases;
 
 public class User {
+
     String stName;
     String stID;
     String stDOB;
 
-    public User(){}
-    public User(String stName, String stID){
+    public User() {
+    }
+
+    public User(String stName, String stID) {
         this.stName = stName;
         this.stID = stID;
     }
-    public User(String stName, String stID, String stDOB){
+
+    public User(String stName, String stID, String stDOB) {
         this.stName = stName;
         this.stID = stID;
         this.stDOB = stDOB;
 
     }
+
     public String getStName() {
         return stName;
     }
